@@ -14,7 +14,7 @@ import { Placeholder } from "@/components/ui/Placeholder";
 import { SIGHTSEEING_FAQS } from "@/lib/faqs";
 import { serviceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
-import { TOURS } from "@/lib/tours";
+import { SIGHTSEEING_HERO, TOURS } from "@/lib/tours";
 import { quoteMessage } from "@/lib/whatsapp";
 
 const PATH = "/goa-sightseeing/";
@@ -41,6 +41,13 @@ export default function SightseeingHubPage() {
           </p>
         }
         quoteMessage={quoteMessage("Goa sightseeing")}
+        media={
+          <SightPhoto
+            image={SIGHTSEEING_HERO}
+            sizes="(min-width: 1152px) 540px, (min-width: 1024px) 46vw, 100vw"
+            preload
+          />
+        }
       />
 
       <Band>
@@ -51,7 +58,7 @@ export default function SightseeingHubPage() {
               <SightPhoto
                 image={tour.hero}
                 sizes="(min-width: 1024px) 370px, 100vw"
-                className="rounded-none border-0 border-b-2"
+                className="rounded-none"
               />
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-2xl font-extrabold text-forest">

@@ -36,8 +36,8 @@ export default function DudhsagarPage() {
             takes you through the sanctuary to the falls and back. The jeep safari is paid separately.
           </p>
           <p>
-            On the way back you can add a stop at Tambdi Surla Mahadev Temple or a spice farm in Ponda. Plan on a
-            full day of about 10 to 12 hours.
+            On the way back you can add a stop at a spice farm in Ponda. Plan on a full day of about 10 to 12
+            hours.
           </p>
           <h3>When the safari runs</h3>
           <p>
