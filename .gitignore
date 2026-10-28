@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+/build
+
+# env files (commit .env.example only)
+.env*
+!.env.example
+
+# private project notes: kept on the owner's machine, never pushed
+/BUILD-BRIEF.md
+/TRACKING-SETUP.md
+/CONTENT-TODO.md
+
+# photos the owner marked for deletion
+/Brand/photos/_to_delete/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+*.tsbuildinfo
+next-env.d.ts

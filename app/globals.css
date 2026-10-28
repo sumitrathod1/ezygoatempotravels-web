@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Palette from Brand/ezygoa-logo-A/README.txt, plus neutrals for text and surfaces. */
+@theme {
+  --color-forest: #0e4d3c;
+  --color-night: #0a3a2d;
+  --color-deep: #082f25;
+  --color-sun: #ffc531;
+  --color-sun-dark: #f0b20f;
+  --color-gold: #8a6300;
+  --color-cream: #fbf7ee;
+  --color-sand: #f3ecdb;
+  --color-mint: #e3eee9;
+  --color-line: #e2d9c4;
+  --color-ink: #1b2622;
+  --color-muted: #4f5d57;
+  --color-danger: #b42318;
+}
+
+@theme inline {
+  --font-display: var(--font-baloo), ui-rounded, system-ui, sans-serif;
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-forest);
+    outline-offset: 2px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--color-sun);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-center font-semibold transition-colors;
+  }
+  .btn-sun {
+    @apply bg-sun text-night hover:bg-sun-dark;
+  }
+  .btn-forest {
+    @apply bg-forest text-white hover:bg-night;
+  }
+  .btn-outline {
+    @apply border-2 border-forest text-forest hover:bg-forest hover:text-white;
+  }
+  .btn-outline-light {
+    @apply border-2 border-white/70 text-white hover:bg-white/10;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold tracking-wide text-gold uppercase;
+  }
+
+  /* Dashed road line from the logo, used as a divider. */
+  .road-line {
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--color-sun) 0 22px,
+      transparent 22px 38px
+    );
+  }
+
+  .prose-body p + p {
+    @apply mt-4;
+  }
+}
+
+/* Mobile menu open (set by HeaderNav): the page behind can't scroll, and the sticky
+   Call | WhatsApp bar is hidden so it never covers the menu's own buttons.
+   Deliberately outside @layer: unlayered rules beat Tailwind utilities such as the bar's `grid`. */
+html[data-menu-open] {
+  overflow: hidden;
+}
+html[data-menu-open] [data-hide-when-menu-open] {
+  display: none;
+}
