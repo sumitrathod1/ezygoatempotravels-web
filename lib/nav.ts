@@ -44,7 +44,6 @@ export const MAIN_NAV: NavItem[] = [
       { label: "Dudhsagar", href: "/goa-sightseeing/dudhsagar/" },
     ],
   },
-  { label: "Reviews", href: "/reviews/" },
   { label: "About", href: "/about/" },
   { label: "FAQ", href: "/faq/" },
   { label: "Contact", href: "/contact/" },
@@ -71,7 +70,6 @@ export const SERVICE_LINKS: NavLink[] = [
 
 export const INFO_LINKS: NavLink[] = [
   { label: "Areas we serve", href: "/areas-we-serve/" },
-  { label: "Reviews", href: "/reviews/" },
   { label: "About us", href: "/about/" },
   { label: "FAQ", href: "/faq/" },
   { label: "Contact", href: "/contact/" },

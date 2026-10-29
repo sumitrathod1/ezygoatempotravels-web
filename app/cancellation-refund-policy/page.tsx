@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/sections/LegalPage";
 import { CallLink, EmailLink, WhatsAppLink } from "@/components/ui/ContactLinks";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { BUSINESS } from "@/lib/business";
+import { POLICY } from "@/lib/policy";
 import { pageMetadata } from "@/lib/seo";
 
 const PATH = "/cancellation-refund-policy/";
@@ -10,7 +10,7 @@ const PATH = "/cancellation-refund-policy/";
 export const metadata = pageMetadata({
   title: "Cancellation and Refund Policy | Ezy Goa Tempo Travels",
   description:
-    "How to cancel or change a booking with Ezy Goa Tempo Travels, cancellation charges, refunds and partner-operated bookings.",
+    "How to cancel or change a booking with Ezy Goa Tempo Travels: free cancellation up to 24 hours before pickup, refunds, no-shows and mini bus bookings.",
   path: PATH,
 });
 
@@ -22,6 +22,13 @@ export default function CancellationPage() {
         refunded.
       </p>
 
+      <h2>In short</h2>
+      <ul>
+        <li>{POLICY.freeCancellation}</li>
+        <li>{POLICY.lateCancellation}</li>
+        <li>{POLICY.refundMethod}</li>
+      </ul>
+
       <h2>How to cancel or change a booking</h2>
       <p>
         Tell us as early as you can, on <WhatsAppLink location="content">WhatsApp</WhatsAppLink>, by phone on{" "}
@@ -31,25 +38,22 @@ export default function CancellationPage() {
         cancellation.
       </p>
 
-      <h2>Cancellation charges</h2>
-      <p>
-        <Placeholder>cancellation windows and charges (for example, how many hours or days before pickup)</Placeholder>
-      </p>
-
       <h2>Advance payment</h2>
       <p>
-        <Placeholder>advance amount, and whether it is refundable</Placeholder>
+        {POLICY.advance} {POLICY.balance}
       </p>
+
+      <h2>Cancellation charges</h2>
+      <p>
+        {POLICY.freeCancellation} {POLICY.advanceRefund}
+      </p>
+      <p>{POLICY.lateCancellation}</p>
 
       <h2>Refunds</h2>
-      <p>
-        <Placeholder>how refunds are paid (method) and how long they take</Placeholder>
-      </p>
+      <p>{POLICY.refundMethod}</p>
 
       <h2>If we have to cancel</h2>
-      <p>
-        <Placeholder>what happens if Ezy Goa Tempo Travels cancels (refund, alternative vehicle)</Placeholder>
-      </p>
+      <p>{POLICY.weCancel}</p>
 
       <h2>Changes to date, time or route</h2>
       <p>
@@ -59,15 +63,22 @@ export default function CancellationPage() {
 
       <h2>No-shows and late arrivals</h2>
       <p>
-        <Placeholder>what happens if the group doesn&apos;t turn up, or is very late, at pickup</Placeholder>
+        {POLICY.noShow} {POLICY.runningLate}
+      </p>
+      <p>
+        For airport pickups, the driver tracks your flight and waits up to 60 minutes after the confirmed pickup
+        time, so a delayed flight doesn&apos;t count as a no-show.
       </p>
 
-      <h2>Partner-operated bookings</h2>
+      <h2>Mini bus bookings</h2>
       <p>
-        Mini buses are supplied by partner operators, and cancellations for them may follow the
-        operator&apos;s own terms. The Dudhsagar jeep safari is run by the forest department and paid for
-        separately on the day.{" "}
-        <Placeholder>how cancellations work for partner-operated mini buses</Placeholder>
+        Mini buses are supplied by our partner operators. {POLICY.partnerBus}
+      </p>
+
+      <h2>Dudhsagar jeep safari</h2>
+      <p>
+        The jeep safari is run by the forest department and paid for separately on the day, so it isn&apos;t
+        part of our refund.
       </p>
 
       <p>

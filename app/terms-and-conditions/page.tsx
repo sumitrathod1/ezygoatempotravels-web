@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/sections/LegalPage";
 import { CallLink, EmailLink } from "@/components/ui/ContactLinks";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { ADDRESS_ONE_LINE, BUSINESS } from "@/lib/business";
+import { CANCELLATION_SUMMARY, POLICY } from "@/lib/policy";
 import { pageMetadata } from "@/lib/seo";
 
 const PATH = "/terms-and-conditions/";
@@ -30,7 +30,7 @@ export default function TermsPage() {
           on the day.
         </li>
         <li>
-          On the Dudhsagar trip, our vehicle goes as far as the Kulem/Mollem checkpoint. The last stretch to the
+          On the Dudhsagar trip, our vehicle goes as far as the Kulem checkpoint. The last stretch to the
           falls is by the forest department&apos;s jeep safari, which is paid for separately.
         </li>
       </ul>
@@ -46,22 +46,20 @@ export default function TermsPage() {
         describes; if the plan changes, the quote may change too.
       </p>
       <p>
-        <strong>Confirming a booking:</strong>{" "}
-        <Placeholder>how a booking is confirmed, and any advance amount</Placeholder>
+        <strong>Confirming a booking:</strong> {POLICY.advance}
       </p>
       <p>
-        <strong>What a quote includes:</strong>{" "}
-        <Placeholder>tolls, parking, driver allowance, night charges: included or extra (words only)</Placeholder>
+        <strong>What a quote includes:</strong> {POLICY.included} {POLICY.extras} {POLICY.notIncluded}
       </p>
 
       <h2>Payment</h2>
       <p>
-        <Placeholder>payment methods, and when the balance is due</Placeholder>
+        {POLICY.balance} {POLICY.payment}
       </p>
 
       <h2>Cancellations and changes</h2>
       <p>
-        Cancellations and refunds are covered by our{" "}
+        {CANCELLATION_SUMMARY} Cancellations and refunds are covered in full by our{" "}
         <Link href="/cancellation-refund-policy/">cancellation and refund policy</Link>. To change the date,
         time or route, contact us as early as possible; changes depend on vehicle availability.
       </p>

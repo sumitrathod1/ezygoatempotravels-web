@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { CANCELLATION_SUMMARY, POLICY } from "@/lib/policy";
 import { SectionHeading } from "./SectionHeading";
 
 const STEPS = [
@@ -38,13 +38,13 @@ export function HowBookingWorks() {
           <div>
             <dt className="font-semibold">Payment</dt>
             <dd className="mt-1 text-muted">
-              <Placeholder>advance amount, when the balance is paid, and payment methods (UPI / cash / bank)</Placeholder>
+              {POLICY.advance} {POLICY.balance} {POLICY.payment}
             </dd>
           </div>
           <div>
             <dt className="font-semibold">Cancellation</dt>
             <dd className="mt-1 text-muted">
-              <Placeholder>one-line cancellation summary</Placeholder>{" "}
+              {CANCELLATION_SUMMARY}{" "}
               <Link href="/cancellation-refund-policy/" className="font-medium text-forest underline">
                 Read the cancellation and refund policy
               </Link>

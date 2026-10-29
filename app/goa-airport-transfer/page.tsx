@@ -7,7 +7,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Band, Prose } from "@/components/sections/Prose";
 import { QuoteSection } from "@/components/sections/QuoteSection";
 import { SectionHeading } from "@/components/sections/SectionHeading";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { POLICY } from "@/lib/policy";
 import { AIRPORT_FAQS } from "@/lib/faqs";
 import { serviceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -149,15 +149,13 @@ export default function AirportTransferPage() {
             <h2>Arrivals</h2>
             <p>
               Send your flight number, the arrival time and the airport code with your booking. Pickup and
-              drop run 24×7, so late-night and early-morning flights are fine.
+              drop run 24×7, so late-night and early-morning flights are fine. {POLICY.nightCharges}
             </p>
             <p>
-              <strong>If your flight is delayed:</strong>{" "}
-              <Placeholder>how delays are handled (free waiting time, what to do if the flight is very late)</Placeholder>
+              <strong>If your flight is delayed:</strong> {POLICY.airportDelay}
             </p>
             <p>
-              <strong>Where you meet the driver:</strong>{" "}
-              <Placeholder>meeting point at each airport</Placeholder>
+              <strong>Where you meet the driver:</strong> {POLICY.meetingPoint}
             </p>
             <h2>Departures</h2>
             <p>

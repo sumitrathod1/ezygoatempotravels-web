@@ -37,11 +37,12 @@ export interface Tour {
 
 /** A supplied photo in public/images/sightseeing/. */
 const photo = (file: string, alt: string): SightImage => ({ file, alt, src: `/images/sightseeing/${file}` });
-/** A photo still to come: renders as a labelled placeholder. */
-const pending = (file: string, alt: string): SightImage => ({ file, alt });
 
 /** Hero image for the /goa-sightseeing/ overview page. */
-export const SIGHTSEEING_HERO = photo("goa-sightseeing-hero.jpg", "Dolphin-watching boat trip off the coast of North Goa");
+export const SIGHTSEEING_HERO = photo(
+  "goa-sightseeing-hero.jpg",
+  "A family watching the sunset over a palm-lined Goa beach from a hilltop",
+);
 
 const NG = {
   dolphin: photo("north-goa/north-goa-dolphin-trip.jpg", "Dolphin-watching boat trip from Sinquerim, North Goa"),
@@ -50,7 +51,7 @@ const NG = {
   candolim: photo("north-goa/north-goa-candolim-beach.jpg", "Candolim Beach with beach shacks, North Goa"),
   calangute: photo("north-goa/north-goa-calangute-beach.jpg", "Calangute Beach, North Goa"),
   snowPark: photo("north-goa/north-goa-snow-park.jpg", "Snow Park Goa, North Goa"),
-  thunderWorld: photo("north-goa/north-goa-thunder-world.jpg", "Thunder World, North Goa"),
+  thunderWorld: photo("north-goa/north-goa-thunder-world.jpg", "Lightning show at Thunder World, Arpora, North Goa"),
   baga: photo("north-goa/north-goa-baga-beach.jpg", "Baga Beach at sunset, North Goa"),
   anjuna: photo("north-goa/north-goa-anjuna-beach.jpg", "Rocks and cliffs at Anjuna Beach, North Goa"),
   chapora: photo("north-goa/north-goa-chapora-fort.jpg", "Sunset from Chapora Fort, North Goa"),
@@ -60,7 +61,7 @@ export const NORTH_GOA: Tour = {
   slug: "north-goa",
   path: "/goa-sightseeing/north-goa/",
   name: "North Goa Sightseeing",
-  duration: "Full day, about 9–10 hours",
+  duration: "Full day, about 8 hours",
   quoteSubject: "North Goa Sightseeing (full day)",
   hero: NG.chapora,
   stops: [
@@ -92,12 +93,14 @@ export const NORTH_GOA: Tour = {
     },
     {
       name: "Snow Park Goa",
-      note: "An indoor snow play area: a cold break in the middle of a beach day. Entry is paid separately.",
+      where: "Baga",
+      note: "An indoor snow park on the Calangute–Baga road. Winter jackets, gloves and shoes are handed out at the counter. Allow about 2 hours; entry is paid separately.",
       image: NG.snowPark,
     },
     {
       name: "Thunder World",
-      note: "An indoor attraction on the way to Baga. Entry is paid separately.",
+      where: "Arpora",
+      note: "An indoor, electricity-themed show with lightning effects, a plasma chair and hair-raising static. It's a show, not an amusement park with rides. Allow about 2 hours; entry is paid separately.",
       image: NG.thunderWorld,
     },
     {
@@ -133,7 +136,7 @@ export const SOUTH_GOA: Tour = {
   slug: "south-goa",
   path: "/goa-sightseeing/south-goa/",
   name: "South Goa Sightseeing",
-  duration: "Full day, about 9–11 hours",
+  duration: "Full day, about 8 hours",
   quoteSubject: "South Goa Sightseeing (full day)",
   hero: SG.basilica,
   stops: [
@@ -189,12 +192,12 @@ export const DUDHSAGAR: Tour = {
   slug: "dudhsagar",
   path: "/goa-sightseeing/dudhsagar/",
   name: "Dudhsagar Waterfall Trip",
-  duration: "Full day, about 10–12 hours",
+  duration: "Full day, about 8 hours",
   quoteSubject: "Dudhsagar Waterfall Trip (full day)",
   hero: DS.waterfall,
   stops: [
     {
-      name: "Kulem / Mollem checkpoint",
+      name: "Kulem checkpoint",
       note: "Our vehicle drives the group from your hotel to the checkpoint. Private vehicles can't go any further.",
     },
     {
@@ -211,7 +214,8 @@ export const DUDHSAGAR: Tour = {
       name: "Spice farm in Ponda",
       optional: true,
       note: "An optional stop at a Ponda spice farm on the drive back.",
-      image: pending("dudhsagar/dudhsagar-ponda-spice-farm.jpg", "A spice farm in Ponda"),
+      // Owner's choice: the same photo as the South Goa Sahakari Spice Farm stop.
+      image: photo("south-goa/south-goa-sahakari-spice-farm.jpg", "Guided walk at a spice farm in Ponda"),
     },
   ],
 };

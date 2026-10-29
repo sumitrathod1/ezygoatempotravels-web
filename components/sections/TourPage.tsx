@@ -6,7 +6,6 @@ import { serviceSchema, type FaqItem } from "@/lib/schema";
 import type { Tour } from "@/lib/tours";
 import { quoteMessage } from "@/lib/whatsapp";
 import { JsonLd } from "@/components/JsonLd";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { CtaBand, RelatedLinks } from "./CtaBand";
 import { FaqSection } from "./FaqList";
 import { IncludedList, SightPhoto, StopList } from "./Misc";
@@ -85,12 +84,8 @@ export function TourPage({
       <Band sand>
         <SectionHeading eyebrow="What's covered" title="What the vehicle hire includes" />
         <IncludedList
-          included={[
-            "Your vehicle and driver for the trip",
-            "Pickup and drop at your hotel or villa",
-            <Placeholder key="costs">whether fuel, tolls and parking are included</Placeholder>,
-          ]}
-          separate={notIncluded}
+          included={["Your vehicle and driver for the trip", "Pickup and drop at your hotel or villa", "Fuel and driver charges"]}
+          separate={[...notIncluded, "Tolls and parking"]}
         />
       </Band>
 

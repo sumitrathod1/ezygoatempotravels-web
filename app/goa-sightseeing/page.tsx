@@ -10,7 +10,6 @@ import { QuoteSection } from "@/components/sections/QuoteSection";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { WhatsAppLink } from "@/components/ui/ContactLinks";
 import { WhatsAppIcon } from "@/components/ui/Icons";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { SIGHTSEEING_FAQS } from "@/lib/faqs";
 import { serviceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -116,8 +115,9 @@ export default function SightseeingHubPage() {
             </p>
             <h3>Not included in the vehicle hire</h3>
             <p>
-              Entry tickets, the dolphin boat ride, the Mandovi river cruise and the Dudhsagar jeep safari are
-              paid for separately, so carry some cash.
+              Fuel and driver charges are included. Entry tickets, the dolphin boat ride, the Mandovi river
+              cruise and the Dudhsagar jeep safari are paid for separately, and tolls and parking are extra, so
+              carry some cash.
             </p>
           </Prose>
           <Prose>
@@ -127,11 +127,13 @@ export default function SightseeingHubPage() {
               <Link href="/tempo-traveller-in-goa/#12-14-seater">12 &amp; 14 seater</Link> and 15 to 20 the{" "}
               <Link href="/tempo-traveller-in-goa/#17-20-seater">17 &amp; 20 seater</Link>. The{" "}
               <Link href="/urbania-on-rent-goa/">Force Urbania</Link> comes as a 12 or 17 seater, and groups of 21
-              to 40 can ask about a <Link href="/bus-hire-goa/">mini bus</Link> from our partner operators.
+              to 40 can travel in a <Link href="/bus-hire-goa/">mini bus</Link> from our partner operators.
             </p>
-            <h2>Shared coach tours</h2>
+            <h2>Private hire only</h2>
             <p>
-              <Placeholder>whether shared (seat-in-coach) tours are offered, and for which circuits</Placeholder>
+              We don&apos;t run shared coach (seat-in-coach) tours. Every tour is private hire: the whole vehicle
+              is for your group, and pickup is from your hotel or villa anywhere in North Goa, with South Goa
+              hotels on request.
             </p>
           </Prose>
         </div>

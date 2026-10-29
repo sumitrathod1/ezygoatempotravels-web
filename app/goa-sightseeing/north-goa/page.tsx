@@ -31,7 +31,8 @@ export default function NorthGoaPage() {
         <>
           <h2>How the day works</h2>
           <p>
-            Your vehicle collects the group from your hotel or villa and stays with you for the day. The stops
+            Your vehicle collects the group from your hotel or villa, usually between 8:30 and 9:00 AM, and
+            stays with you for the day. The stops
             follow the coast north, in the order shown: the dolphin boat from Sinquerim first, then Fort Aguada
             and the beaches from Sinquerim to Baga, with Snow Park Goa and Thunder World on the way. After
             Anjuna, the day ends at Chapora Fort for sunset.
@@ -42,13 +43,13 @@ export default function NorthGoaPage() {
             Up to 14 people fit the{" "}
             <Link href="/tempo-traveller-in-goa/#12-14-seater">12 &amp; 14 seater</Link>, 15 to 20 the{" "}
             <Link href="/tempo-traveller-in-goa/#17-20-seater">17 &amp; 20 seater</Link>. The{" "}
-            <Link href="/urbania-on-rent-goa/">Force Urbania</Link> comes as a 12 or 17 seater, and groups of 21 to 40 can ask about a{" "}
+            <Link href="/urbania-on-rent-goa/">Force Urbania</Link> comes as a 12 or 17 seater, and groups of 21 to 40 can travel in a{" "}
             <Link href="/bus-hire-goa/">mini bus</Link> from our partner operators.
           </p>
           <h3>Paid on the day</h3>
           <p>
-            Entry tickets, the dolphin boat ride and any water sports are not part of the vehicle hire, so carry
-            some cash.
+            Entry tickets, the dolphin boat ride and any water sports are not part of the vehicle hire, and tolls
+            and parking are extra, so carry some cash.
           </p>
         </>
       }

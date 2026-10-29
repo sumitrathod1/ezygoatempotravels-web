@@ -1,7 +1,6 @@
 import { LegalPage } from "@/components/sections/LegalPage";
 import { CallLink, EmailLink } from "@/components/ui/ContactLinks";
-import { Placeholder } from "@/components/ui/Placeholder";
-import { ADDRESS_ONE_LINE, BUSINESS } from "@/lib/business";
+import { ADDRESS_ONE_LINE, BUSINESS, OWNER_NAME } from "@/lib/business";
 import { pageMetadata } from "@/lib/seo";
 import { SITE_HOST } from "@/lib/site";
 
@@ -106,7 +105,8 @@ export default function PrivacyPolicyPage() {
       <h2>How long we keep information</h2>
       <p>
         We keep booking details only for as long as we need them to run your trip and to meet legal and
-        accounting requirements. <Placeholder>how long booking details and chats are kept</Placeholder>
+        accounting requirements: booking chats and details for 2 years after the trip, and website server logs
+        for 90 days.
       </p>
 
       <h2>Your rights</h2>
@@ -126,7 +126,7 @@ export default function PrivacyPolicyPage() {
       <h2>Grievances</h2>
       <p>
         If you have a concern about how we handle your information, contact our grievance officer:{" "}
-        <Placeholder>grievance officer&apos;s name</Placeholder>, {BUSINESS.name}, {ADDRESS_ONE_LINE}, email{" "}
+        {OWNER_NAME}, {BUSINESS.name}, {ADDRESS_ONE_LINE}, email{" "}
         <EmailLink location="content">{BUSINESS.email}</EmailLink>. If you are not satisfied with our reply, you
         may complain to the Data Protection Board of India.
       </p>

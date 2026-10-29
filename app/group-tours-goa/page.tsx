@@ -6,7 +6,6 @@ import { FaqSection } from "@/components/sections/FaqList";
 import { PageHero } from "@/components/sections/PageHero";
 import { Band, Prose } from "@/components/sections/Prose";
 import { QuoteSection } from "@/components/sections/QuoteSection";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { GROUP_FAQS } from "@/lib/faqs";
 import { serviceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -51,8 +50,7 @@ const GROUPS = [
         </p>
         <p>
           For visiting clients or senior leadership, the <Link href="/urbania-on-rent-goa/">Force Urbania</Link>{" "}
-          gives a more premium ride. GST invoices:{" "}
-          <Placeholder>whether GST invoices are provided</Placeholder>
+          gives a more premium ride.
         </p>
       </>
     ),
@@ -77,7 +75,8 @@ const GROUPS = [
           and on changing call times. Pickup and drop run 24×7.
         </p>
         <p>
-          <Placeholder>crew and equipment transport, standby hours, anything a production should know</Placeholder>
+          Crews travel with their equipment. Tell us the call times, the locations and how much kit you&apos;re
+          carrying when you ask for a quote.
         </p>
       </>
     ),

@@ -16,13 +16,15 @@ export const BUSINESS = {
   hours: "24×7 pickup and drop",
 } as const;
 
+/** The owner, who runs the business and is the grievance officer in the privacy policy. */
+export const OWNER_NAME = "Sunil";
+
 /** Review and social profiles. Add a URL only once the owner confirms the profile exists (§8: no dead links). */
 export const SOCIAL_PROFILES: string[] = [];
 
 /** Shown in the credentials block only when filled in (BUILD-BRIEF.md §9). */
 export const CREDENTIALS: { label: string; value: string | null }[] = [
   { label: "Udyam registration", value: null },
-  { label: "GST number", value: null },
   { label: "All India Tourist Permit / commercial registration", value: null },
 ];
 

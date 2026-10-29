@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 import { DUDHSAGAR } from "@/lib/tours";
 
 const DESCRIPTION =
-  "Dudhsagar waterfall trip for groups: our vehicle to the Kulem/Mollem checkpoint and back, then the forest department's jeep safari to the falls.";
+  "Dudhsagar waterfall trip for groups: our vehicle to the Kulem checkpoint and back, then the forest department's jeep safari to the falls.";
 
 export const metadata = pageMetadata({
   title: "Dudhsagar Trip from Goa by Tempo Traveller",
@@ -23,7 +23,7 @@ export default function DudhsagarPage() {
       lead={
         <p>
           A full day to Dudhsagar, the waterfall on the Goa–Karnataka border. Your group travels together in
-          one tempo traveller, Urbania or mini bus from your hotel or villa to the Kulem/Mollem checkpoint, and
+          one tempo traveller, Urbania or mini bus from your hotel or villa to the Kulem checkpoint, and
           the forest department&apos;s jeep safari takes you the rest of the way.
         </p>
       }
@@ -31,7 +31,8 @@ export default function DudhsagarPage() {
         <>
           <h2>How the day works</h2>
           <p>
-            Your vehicle collects the group from your hotel or villa and drives to the Kulem/Mollem checkpoint.
+            Your vehicle collects the group from your hotel or villa, usually between 6:00 and 7:00 AM, and
+            drives to the Kulem checkpoint.
             Private vehicles can&apos;t go further, so from there the forest department&apos;s jeep safari
             takes you through the sanctuary to the falls and back. The jeep safari is paid separately.
           </p>
@@ -60,13 +61,14 @@ export default function DudhsagarPage() {
           <p>
             Up to 14 people fit the{" "}
             <Link href="/tempo-traveller-in-goa/#12-14-seater">12 &amp; 14 seater</Link>, 15 to 20 the{" "}
-            <Link href="/tempo-traveller-in-goa/#17-20-seater">17 &amp; 20 seater</Link>. The <Link href="/urbania-on-rent-goa/">Force Urbania</Link> comes as a 12 or 17 seater. For a bigger group, ask
-            about a <Link href="/bus-hire-goa/">mini bus</Link> from our partner operators.
+            <Link href="/tempo-traveller-in-goa/#17-20-seater">17 &amp; 20 seater</Link>. The{" "}
+            <Link href="/urbania-on-rent-goa/">Force Urbania</Link> comes as a 12 or 17 seater, and groups of 21
+            to 40 can travel in a <Link href="/bus-hire-goa/">mini bus</Link> from our partner operators.
           </p>
         </>
       }
       notIncluded={[
-        "The forest department's jeep safari from Kulem/Mollem",
+        "The forest department's jeep safari from Kulem",
         "Entry tickets, including at the optional spice farm",
       ]}
       related={[

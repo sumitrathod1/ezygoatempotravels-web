@@ -4,8 +4,7 @@ import { CredentialsBlock } from "@/components/sections/Misc";
 import { PageHero } from "@/components/sections/PageHero";
 import { Band, Prose } from "@/components/sections/Prose";
 import { FleetPhoto } from "@/components/ui/FleetPhoto";
-import { PhotoSlot, Placeholder } from "@/components/ui/Placeholder";
-import { ADDRESS_ONE_LINE, BUSINESS } from "@/lib/business";
+import { ADDRESS_ONE_LINE, BUSINESS, OWNER_NAME } from "@/lib/business";
 import { TEMPO_TRAVELLER_12_14 } from "@/lib/fleet";
 import { pageMetadata } from "@/lib/seo";
 
@@ -37,13 +36,12 @@ export default function AboutPage() {
 
       <Band>
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-4">
-            <PhotoSlot label="the owner" />
-          </div>
+          <FleetPhoto photo={REAL_PHOTO} sizes="(min-width: 1152px) 500px, (min-width: 1024px) 44vw, 100vw" />
           <Prose>
             <h2>Who runs the business</h2>
             <p>
-              <Placeholder>owner&apos;s name and a few lines, in their own words, on who runs the business and how it started</Placeholder>
+              {BUSINESS.name} is run by {OWNER_NAME}. He started the business because he loves helping travellers
+              have the Goa trip they&apos;ve been dreaming of, and he takes pride in looking after every group well.
             </p>
             <h2>What we do</h2>
             <p>
@@ -63,30 +61,26 @@ export default function AboutPage() {
             <h2>How we work</h2>
             <ul>
               <li>Every trip is quoted on its own, on WhatsApp or by phone. There are no prices on the website.</li>
-              <li>Pickup and drop are available 24×7.</li>
+              <li>
+                Pickup and drop are available 24×7, anywhere in North Goa, with South Goa hotels on request.
+              </li>
               <li>
                 You deal with us directly: {BUSINESS.phoneDisplay}, {BUSINESS.email}, {ADDRESS_ONE_LINE}.
               </li>
             </ul>
           </Prose>
         </div>
-      </Band>
-
-      <Band sand>
-        <div className="grid items-start gap-10 lg:grid-cols-2">
-          <FleetPhoto photo={REAL_PHOTO} sizes="(min-width: 1024px) 552px, 100vw" />
-          <div className="space-y-6">
-            <PhotoSlot label="the team or drivers" className="aspect-[16/9]" />
-            <CredentialsBlock />
-          </div>
+        {/* Registration details: renders nothing until the owner supplies a number. */}
+        <div className="mt-10 empty:hidden">
+          <CredentialsBlock />
         </div>
       </Band>
 
       <RelatedLinks
         links={[
           { label: "Our fleet", href: "/fleet/" },
-          { label: "Reviews", href: "/reviews/" },
           { label: "Areas we serve", href: "/areas-we-serve/" },
+          { label: "FAQ", href: "/faq/" },
           { label: "Contact us", href: "/contact/" },
         ]}
       />

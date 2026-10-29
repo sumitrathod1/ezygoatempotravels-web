@@ -6,15 +6,18 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Band, Prose } from "@/components/sections/Prose";
 import { QuoteSection } from "@/components/sections/QuoteSection";
 import { SectionHeading } from "@/components/sections/SectionHeading";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { POLICY } from "@/lib/policy";
 import { OUTSTATION_FAQS } from "@/lib/faqs";
 import { serviceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { quoteMessage } from "@/lib/whatsapp";
 
 const PATH = "/outstation-trips-from-goa/";
+
+// Routes the owner runs (CONTENT-ANSWERS.md, 29 Oct 2026). Trips anywhere in India also start from Goa.
+const ROUTES = ["Gokarna", "Hampi", "Kolhapur", "Belagavi (Belgaum)", "Mumbai", "Pune", "Kerala"];
 const DESCRIPTION =
-  "Outstation trips from Goa for groups by tempo traveller or Force Urbania, with a driver, one way or return. Get a quote on WhatsApp.";
+  "Group trips from Goa to Gokarna, Hampi, Kolhapur, Belagavi, Mumbai, Pune, Kerala and across India, by tempo traveller or Urbania with a driver.";
 
 export const metadata = pageMetadata({
   title: "Outstation Trips from Goa by Tempo Traveller",
@@ -41,7 +44,17 @@ export default function OutstationPage() {
       <Band>
         <SectionHeading eyebrow="Routes" title="Where we go" />
         <div className="rounded-2xl border border-line bg-white p-6 text-lg text-muted">
-          <Placeholder>outstation routes you run (only confirmed routes are listed here)</Placeholder>
+          <ul className="flex flex-wrap gap-2">
+            {ROUTES.map((route) => (
+              <li key={route} className="rounded-full bg-mint px-4 py-2 font-semibold text-forest">
+                Goa to {route}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4">
+            These are our most-asked trips. We can take your group anywhere in India, starting from Goa: send the
+            route and dates and we&apos;ll quote for it.
+          </p>
         </div>
       </Band>
 
@@ -55,12 +68,13 @@ export default function OutstationPage() {
               stay, so the quote covers the whole journey.
             </p>
             <p>
-              Interstate travel needs the right permits, and some states charge an entry tax at the border.{" "}
-              <Placeholder>who arranges and pays for permits and state entry tax</Placeholder>
+              Interstate travel needs the right permits, and some states charge an entry tax at the border. We
+              handle the vehicle&apos;s permit. State entry tax, tolls and parking are paid by the customer.
             </p>
             <h3>Overnight trips</h3>
             <p>
-              <Placeholder>how the driver&apos;s stay and rest are handled on overnight trips (words only, no amounts)</Placeholder>
+              You can arrange the driver&apos;s stay, or pay a driver allowance instead. The driver gets proper
+              rest before driving the next day. {POLICY.nightCharges}
             </p>
           </Prose>
           <Prose>

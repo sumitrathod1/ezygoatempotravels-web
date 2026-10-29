@@ -3,7 +3,6 @@ import { MapPin } from "lucide-react";
 import { CtaBand, RelatedLinks } from "@/components/sections/CtaBand";
 import { PageHero } from "@/components/sections/PageHero";
 import { Band, Prose } from "@/components/sections/Prose";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { pageMetadata } from "@/lib/seo";
 import { quoteMessage } from "@/lib/whatsapp";
 
@@ -20,7 +19,7 @@ const REGIONS = [
   {
     name: "North Goa coast",
     places: "Candolim, Calangute, Baga, Arpora, Anjuna, Vagator, Siolim, Morjim, Mandrem, Arambol",
-    text: "Goa's busiest holiday stretch and the closest to our base. Many hotels and villas here sit on narrow lanes off the main road, and traffic around Calangute and Baga slows right down in peak season, so allow extra time for pickups.",
+    text: "Goa's busiest holiday stretch and the closest to our base. Traffic around Calangute and Baga slows right down in peak season, so allow extra time for pickups.",
   },
   {
     name: "Mapusa and inland North Goa",
@@ -30,7 +29,7 @@ const REGIONS = [
   {
     name: "Panjim and Old Goa",
     places: "Panjim, Miramar, Dona Paula, Ribandar, Old Goa, Karmali",
-    text: "The capital, its waterfront and the heritage churches of Old Goa. Karmali station serves this area. City-centre streets are narrow, so a pickup point on a main road is often easiest.",
+    text: "The capital, its waterfront and the heritage churches of Old Goa. Karmali station serves this area.",
   },
   {
     name: "Central Goa",
@@ -40,7 +39,7 @@ const REGIONS = [
   {
     name: "South Goa",
     places: "Vasco, Margao, Majorda, Colva, Benaulim, Varca, Cavelossim, Agonda, Palolem",
-    text: "Quieter beaches and resorts further from our base. Margao (Madgaon) is the main railway station for the south, and Dabolim airport sits near Vasco.",
+    text: "Quieter beaches and resorts further from our base, so pickups from South Goa hotels are on request. Margao (Madgaon) is the main railway station for the south, and Dabolim airport sits near Vasco.",
   },
 ];
 
@@ -62,11 +61,8 @@ export default function AreasPage() {
         lead={
           <>
             <p>
-              We&apos;re based in Parra, North Goa, and pick up groups across the state, with pickup and drop
-              available 24×7.
-            </p>
-            <p className="mt-3">
-              <Placeholder>confirm the areas you pick up from, and any you don&apos;t</Placeholder>
+              We&apos;re based in Parra, North Goa. We pick up groups anywhere in North Goa, and from South Goa
+              hotels on request, with pickup and drop available 24×7.
             </p>
           </>
         }
@@ -83,10 +79,6 @@ export default function AreasPage() {
               </h2>
               <p className="mt-1 text-sm font-semibold text-gold">{region.places}</p>
               <p className="mt-3 text-muted">{region.text}</p>
-              <p className="mt-3 text-muted">
-                <strong className="text-ink">Pickup notes:</strong>{" "}
-                <Placeholder>pickup notes for {region.name}</Placeholder>
-              </p>
             </li>
           ))}
         </ul>
@@ -107,12 +99,12 @@ export default function AreasPage() {
             </p>
           </Prose>
           <Prose>
-            <h2>Large vehicles and narrow lanes</h2>
+            <h2>Pickup from your door</h2>
             <p>
-              Goa&apos;s villages and beach lanes weren&apos;t built for big vehicles. The compact{" "}
-              <Link href="/tempo-traveller-in-goa/#12-14-seater">12 &amp; 14 seater</Link> fits down more lanes than
-              longer vehicles and mini buses. When you book, send the exact address or a map pin so the pickup
-              point can be planned.
+              We pick up from hotels, villas, homes, airports and stations, in every vehicle size from the{" "}
+              <Link href="/tempo-traveller-in-goa/#12-14-seater">12 &amp; 14 seater</Link> to a{" "}
+              <Link href="/bus-hire-goa/">mini bus</Link>. When you book, send the exact address or a map pin so the
+              driver comes straight to you.
             </p>
           </Prose>
         </div>

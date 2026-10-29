@@ -79,9 +79,7 @@ const tt1214 = {
   sideStudio: photo(TT1214, `${TT1214}-goa-side-studio.png`, 1672, 941, "Our white 12 & 14 seater tempo traveller, side view"),
   sideBrand: photo(TT1214, `${TT1214}-goa-side-brand.jpg`, 1600, 900, "Our 12 & 14 seater tempo traveller, side view"),
   sideReal: photo(TT1214, `${TT1214}-goa-side-real.jpg`, 1600, 900, "Our 12 & 14 seater tempo traveller parked outdoors"),
-  front: photo(TT1214, `${TT1214}-goa-front-studio.png`, 1672, 941, "Front view of a 12 & 14 seater tempo traveller", {
-    label: "representative",
-  }),
+  front: photo(TT1214, `${TT1214}-goa-front-studio.png`, 1672, 941, "Front view of our 12 & 14 seater tempo traveller"),
   interior: photo(
     TT1214,
     `${TT1214}-goa-interior.jpg`,
@@ -99,7 +97,7 @@ export const TEMPO_TRAVELLER_12_14: Vehicle = {
   anchor: "12-14-seater",
   href: "/tempo-traveller-in-goa/#12-14-seater",
   summary:
-    "Our compact tempo traveller, offered as a 12 seater or a 14 seater. It's the easiest size to take down narrow village lanes and into busy beach parking, and a sensible pick when your group is too big for two cars.",
+    "Our compact tempo traveller, offered as a 12 seater or a 14 seater: a sensible pick when your group is too big for two cars, with room for luggage behind the last row.",
   specs: {
     capacity: "12 or 14 passengers, plus the driver",
     luggage: `About 8–10 medium suitcases behind the last row. ${LUGGAGE_NOTE}`,
@@ -160,12 +158,19 @@ const urb = {
   interior: photo("urbania", "urbania-goa-interior.jpg", 1448, 1086, "Blue and black seats inside our Force Urbania"),
 };
 
+const URBANIA_AC = "Fully air-conditioned";
+const URBANIA_SEATS = "Individual reclining seats with a centre aisle; USB charging points";
+
 export const URBANIA: Vehicle = {
   id: "urbania",
   name: "Force Urbania",
   cardTitle: "Force Urbania — 12 or 17 seater",
   shortName: "Urbania",
-  cardFacts: { passengers: "12 or 17 passengers", luggage: null, ac: null },
+  cardFacts: {
+    passengers: "12 or 17 passengers",
+    luggage: "About 8–10 (12 seater) or 12+ (17 seater) medium suitcases",
+    ac: "Fully air-conditioned",
+  },
   anchor: "urbania",
   href: "/urbania-on-rent-goa/",
   summary:
@@ -173,11 +178,21 @@ export const URBANIA: Vehicle = {
   variants: [
     {
       name: "Urbania 12 Seater",
-      specs: { capacity: "12 passengers, plus the driver", luggage: null, ac: null, seats: null },
+      specs: {
+        capacity: "12 passengers, plus the driver",
+        luggage: `About 8–10 medium suitcases. ${LUGGAGE_NOTE}`,
+        ac: URBANIA_AC,
+        seats: URBANIA_SEATS,
+      },
     },
     {
       name: "Urbania 17 Seater",
-      specs: { capacity: "17 passengers, plus the driver", luggage: null, ac: null, seats: null },
+      specs: {
+        capacity: "17 passengers, plus the driver",
+        luggage: `About 12 or more medium suitcases. ${LUGGAGE_NOTE}`,
+        ac: URBANIA_AC,
+        seats: URBANIA_SEATS,
+      },
     },
   ],
   photos: {
@@ -206,15 +221,17 @@ export const MINI_BUS: Vehicle = {
   id: "mini_bus",
   name: "Mini Bus",
   shortName: "Mini bus",
-  // Luggage and AC are left off until the owner confirms them.
-  cardFacts: { passengers: "26, 30, 38 or 40 seats" },
+  cardFacts: { passengers: "26, 30, 38 or 40 seats", luggage: "Varies by operator", ac: "Air-conditioned" },
   anchor: "mini-bus",
   href: "/bus-hire-goa/",
   partner: true,
   summary:
     "For groups bigger than a tempo traveller can take. Mini buses with 26, 30, 38 or 40 seats are arranged through our partner operators.",
-  // AC and luggage are left off until the owner confirms them.
-  specs: { capacity: "26, 30, 38 or 40 seats, depending on the bus" },
+  specs: {
+    capacity: "26, 30, 38 or 40 seats, depending on the bus",
+    luggage: "Varies by operator. Tell us how many bags your group has and we'll confirm before the trip.",
+    ac: "Air-conditioned",
+  },
   photos: {
     // No side-studio photo yet, so the card uses the front-studio shot.
     card: bus.front,

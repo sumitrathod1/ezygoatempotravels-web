@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     href: "/goa-sightseeing/dudhsagar/",
     icon: Mountain,
     blurb:
-      "Our vehicle to the Kulem/Mollem checkpoint and back; the forest department's jeep safari, paid separately, takes you to the falls.",
+      "Our vehicle to the Kulem checkpoint and back; the forest department's jeep safari, paid separately, takes you to the falls.",
     quoteSubject: "Dudhsagar Waterfall Trip (full day)",
   },
   {

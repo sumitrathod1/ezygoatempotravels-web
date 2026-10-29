@@ -17,7 +17,6 @@ export const ROUTES: { path: string; priority: number }[] = [
   { path: "/group-tours-goa/", priority: 0.7 },
   { path: "/outstation-trips-from-goa/", priority: 0.6 },
   { path: "/fleet/", priority: 0.7 },
-  { path: "/reviews/", priority: 0.5 },
   { path: "/areas-we-serve/", priority: 0.6 },
   { path: "/about/", priority: 0.5 },
   { path: "/contact/", priority: 0.7 },

@@ -10,7 +10,7 @@ import { QuoteSection } from "@/components/sections/QuoteSection";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { WhatsAppLink } from "@/components/ui/ContactLinks";
 import { WhatsAppIcon } from "@/components/ui/Icons";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { POLICY } from "@/lib/policy";
 import { BOOKING_FAQS, BUS_FAQS } from "@/lib/faqs";
 import { MINI_BUS, MINI_BUS_CAPACITIES } from "@/lib/fleet";
 import { serviceSchema } from "@/lib/schema";
@@ -63,14 +63,18 @@ export default function BusHirePage() {
               the quote. The photos on this page are representative images, not a specific bus.
             </p>
             <p className="mt-2 text-lg text-muted">
-              <Placeholder>anything customers should know about partner bookings (who confirms the bus, how payment works)</Placeholder>
+              {POLICY.partnerBus}
             </p>
           </div>
         </div>
       </Band>
 
       <Band sand>
-        <SectionHeading eyebrow="Sizes" title="26, 30, 38 and 40 seaters" intro="Pick the size by group, with a seat or two to spare." />
+        <SectionHeading
+          eyebrow="Sizes"
+          title="26, 30, 38 and 40 seaters"
+          intro={`Pick the size by group, with a seat or two to spare. Every bus is ${MINI_BUS.specs!.ac!.toLowerCase()}. Luggage space: ${MINI_BUS.specs!.luggage!.charAt(0).toLowerCase()}${MINI_BUS.specs!.luggage!.slice(1)}`}
+        />
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {MINI_BUS_CAPACITIES.map((seats) => (
             <li key={seats} className="flex flex-col rounded-2xl border border-line bg-white p-5">
@@ -128,8 +132,8 @@ export default function BusHirePage() {
               arrivals. Tell us the whole plan and we&apos;ll suggest a combination.
             </p>
             <p>
-              Large buses also need room to turn and park. If your hotel or venue is down a narrow lane,
-              mention it when you ask for a quote so the pickup point can be planned.
+              Send the hotel or venue address, or a map pin, when you ask for a quote, and the bus comes
+              straight there.
             </p>
           </Prose>
         </div>

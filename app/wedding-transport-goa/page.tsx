@@ -5,7 +5,6 @@ import { FaqSection } from "@/components/sections/FaqList";
 import { PageHero } from "@/components/sections/PageHero";
 import { Band, Prose } from "@/components/sections/Prose";
 import { QuoteSection } from "@/components/sections/QuoteSection";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { WEDDING_FAQS } from "@/lib/faqs";
 import { serviceSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -61,7 +60,8 @@ export default function WeddingPage() {
             </ul>
             <h3>Baraat</h3>
             <p>
-              <Placeholder>whether baraat transport is offered, and how it works</Placeholder>
+              Yes, we provide transport for the baraat. Tell us the route, the start time and how many people
+              are travelling, and we&apos;ll include it in the plan.
             </p>
           </Prose>
           <Prose>
@@ -77,10 +77,7 @@ export default function WeddingPage() {
             <ul>
               <li>The schedule for each function, with start times and venues.</li>
               <li>How many guests travel on each run, and from which hotels.</li>
-              <li>
-                Whether the venue&apos;s approach road suits a large vehicle. Some beach and village venues are
-                down narrow lanes.
-              </li>
+              <li>The address or map pin of each venue and hotel.</li>
               <li>One contact person on your side for the day, so changes reach the drivers quickly.</li>
             </ul>
             <p>
